@@ -51,7 +51,7 @@ const modal1 ={
     H: "Personal Website",
     Text: "Created personal website as a project to show resume.",
     Languages: "HTML , JAVA , CSS",
-    Link: "https://arpit-mahajan09.github.io", 
+    Link: "https://github.com/Arpit-Mahajan09/Arpit-Mahajan09.github.io", 
     Img: "images/image.png"
 }
 
