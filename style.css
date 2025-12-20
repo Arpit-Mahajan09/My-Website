@@ -4,6 +4,10 @@
     text-align: center;
     box-sizing: border-box; 
 }
+
+html {
+    scroll-behavior: smooth;
+}
 /* 
 .header{
     display: inline block;
