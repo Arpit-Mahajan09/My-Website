@@ -52,8 +52,17 @@ const modal1 ={
     Text: "Created personal website as a project to show resume.",
     Languages: "HTML , JAVA , CSS",
     Link: "https://github.com/Arpit-Mahajan09/Arpit-Mahajan09.github.io", 
-    Img: "images/image.png"
+    Img: "images/personal.png"
 }
+
+const modal2={
+    H: "Weather Dashboard",
+    Text: "Created an app that shows weather at real time with openweather API",
+    Languages: "HTML , JAVA , CSS",
+    Link: "https://github.com/Arpit-Mahajan09/Weather", 
+    Img: "images/weather.png"
+}  
+
 
 function UserDetails(i){
     document.getElementById("modalH").textContent=i.H;
