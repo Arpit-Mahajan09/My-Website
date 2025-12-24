@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navBar = document.querySelector('nav');
     const sections = Array.from(document.querySelectorAll('section')); 
     let sectionOffsets = [0, ...sections.map(section => section.offsetTop)]; 
+
     const getCurrentIndex = (scrollTop) => {
         for (let i = 1; i < sectionOffsets.length; i++) {
             if (scrollTop < sectionOffsets[i]) {
@@ -52,15 +53,18 @@ const modal1 ={
     Text: "Created personal website as a project to show resume.",
     Languages: "HTML , JAVA , CSS",
     Link: "https://github.com/Arpit-Mahajan09/Arpit-Mahajan09.github.io", 
-    Img: "images/personal.png"
+    Img: "images/personal.png",
+    Dep: ""
 }
+
 
 const modal2={
     H: "Weather Dashboard",
     Text: "Created an app that shows weather at real time with openweather API",
     Languages: "HTML , JAVA , CSS",
     Link: "https://github.com/Arpit-Mahajan09/Weather", 
-    Img: "images/weather.png"
+    Img: "images/weather.png",
+    Dep: "https://weather-pi-tan-44.vercel.app/"
 }  
 
 
@@ -69,26 +73,39 @@ function UserDetails(i){
     document.getElementById("modalText").textContent=i.Text;
     document.getElementById("modalLanguage").textContent=i.Languages;
     document.getElementById("modalimage").src = i.Img;
+    const x=document.getElementById("deployed");
+    if (i.Dep && i.Dep!="") {
+        x.href = i.Dep;
+        x.classList.add('link');
+        x.target = '_blank';
 
+    }
+    else {
+        x.target="";
+        x.removeAttribute("href");
+        x.classList.remove('link');
+        
+    }
 
     document.getElementById("details").onclick = () => {
         window.open(i.Link, "_blank");
     };
 
     document.getElementById("modal").style.display = "flex";
-    modal.classList.add("active");
+    document.getElementById("modal").classList.add("active");
 
 }
 
 
 function closeModal() {
     document.getElementById("modal").classList.remove("active");
-
+    document.getElementById("modal").style.display="none";
 }
 
 window.onclick = function(event) {
     const modal = document.getElementById("modal");
     if (event.target == modal) {
         closeModal()
+
     }
 }

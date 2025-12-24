@@ -439,7 +439,16 @@ footer ul{
 
 .modal img{
     width: 100%;
+
 }
+
+
+
+a.link:hover img{
+    filter:brightness(0.4);
+    transition: filter 0.2s ease; 
+}
+
 #modalH{
     padding-top: 15px;
     color: #2d2d2d;
