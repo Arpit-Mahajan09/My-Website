@@ -6,15 +6,19 @@ let timelineHtml="";
 
 Data.forEach(item => {
     timelineHtml+=`
+        <div class="vl"></div>
         <div class="timeline-item">
-            <h1 class="timelineTitle">${item.title}</h1>
-            <p class="timelineData">${item.detail}</p>
+            <div class="data">
+                <h1 class="timelineTitle">${item.title}</h1>
+                <h5 class="timelineData">${item.detail}</h5>
+            </div>
+            <i class="timelineIcon ${item.iconSrc}"></i>
             <p class="timelineDate">${item.date}</p>
-            <i class="timelineIcon" ${item.iconSrc}></i>
         </div> 
     `;
 });
 timeline.innerHTML=timelineHtml
+
 
 let projectsPage=document.getElementById("project-grid")
 let projectCard=""
